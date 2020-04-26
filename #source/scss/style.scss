@@ -16,7 +16,6 @@ $font-family: "Russia";
 $font-style: normal;
 $font-weight: 400;
 $font-size: 17px;
-$line-height: 0px;
 // </шрифт по умолчанию>----------------------------------------------------
 
 // </ШРИФТЫ>----------------------------------------------------------------
@@ -84,7 +83,6 @@ body {
     font-style: $font-style;
     font-weight: $font-weight;
     font-size: $font-size;
-    line-height: $line-height;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -215,26 +213,43 @@ h6 {
 // <ОСНОВНОЙ БЛОК>-----------------------------------------------------------
 
 .bread-crumbs{
-    display: flex;
-    align-items: center;
-    font-size: 11px;
-    color: #a7a7a7;
+    margin-top: 15px;
 
-    padding-top: 15px;
-}
-.bread-crumbs a{
-    font-size: 11px;
-    color: #a7a7a7;
-    transition: 0.4s;
+    ul {
+        display: flex;
+        align-items: center;
+        color: #a7a7a7;
+        font-size: 11px;
+        flex-wrap: wrap;
 
-    letter-spacing: 4.84px;
+        li {
+            display: flex;
+            align-items: center;
+            padding-right: 27px;
+            position: relative;
+            margin-bottom: 5px;
+
+            &:last-child {
+                padding-right: 0;
+
+            }
+        }
+    
+
+        a {
+            color: #a3a3a3;
+            transition: 0.4s;
+
+            &:hover {
+                color: #c0cc00;
+            }
+        }
+    }
 }
-.bread-crumbs a:hover{
-    color: #c0cc00;
-}
-.bread-crumbs img{
-    margin: 0 27px;
-}
+
+// img.crumbs{
+//     padding-left: 27px;
+// }
 
 .section-main{
     display: flex;
@@ -246,7 +261,7 @@ h6 {
 
     padding-top: 67px;
 }
-.main-menu a{
+.main-menu li>a{
     font-size: 21px;
     color: #767676;
     transition: 0.4s;

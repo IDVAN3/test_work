@@ -53,7 +53,6 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  line-height: 0px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -277,26 +276,31 @@ li.counter li:before {
 }
 
 .bread-crumbs {
+  margin-top: 15px;
+}
+.bread-crumbs ul {
   display: flex;
   align-items: center;
-  font-size: 11px;
   color: #a7a7a7;
-  padding-top: 15px;
+  font-size: 11px;
+  flex-wrap: wrap;
 }
-
-.bread-crumbs a {
-  font-size: 11px;
-  color: #a7a7a7;
+.bread-crumbs ul li {
+  display: flex;
+  align-items: center;
+  padding-right: 27px;
+  position: relative;
+  margin-bottom: 5px;
+}
+.bread-crumbs ul li:last-child {
+  padding-right: 0;
+}
+.bread-crumbs ul a {
+  color: #a3a3a3;
   transition: 0.4s;
-  letter-spacing: 4.84px;
 }
-
-.bread-crumbs a:hover {
+.bread-crumbs ul a:hover {
   color: #c0cc00;
-}
-
-.bread-crumbs img {
-  margin: 0 27px;
 }
 
 .section-main {
@@ -310,7 +314,7 @@ li.counter li:before {
   padding-top: 67px;
 }
 
-.main-menu a {
+.main-menu li > a {
   font-size: 21px;
   color: #767676;
   transition: 0.4s;
